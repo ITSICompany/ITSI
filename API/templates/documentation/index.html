@@ -1,0 +1,21 @@
+{% extends 'base/index.html' %}
+
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/style_documentation.css' %}">
+{% endblock style %}
+
+{% block title %}ITSI{% endblock title %}
+
+{% block content %}
+    <h3>Документация</h3>
+    <div class="carts">
+        <div id="carts_cart__menu" class="carts_cart" >
+            <h4>POST Запрос <span style="color: #0047FF;">#</span></h4>
+            <div id="carts_cart_content" class="carts_cart_content">
+                <h5>url отправки POST запроса: <span style="color: #0047FF;">https://itsi-api.su</span></h5>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

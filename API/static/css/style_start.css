@@ -1,0 +1,60 @@
+.carts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 33px;
+    row-gap: 50px;
+}
+.carts_cart {
+    width: 700px;
+    height: 150px;
+    border-radius: 6px;
+    border: 2px solid #D3D3D3;
+}
+.carts_cart h5 {
+    color: #8B8B8B;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    max-width: 480px;
+}
+.carts_cart h4 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.cart_star {
+    width: calc(100% - 120px); /* Adjusted width to account for margin */
+    height: 150px;
+    border-radius: 6px;
+    border: 2px solid #D3D3D3;
+    grid-column: span 2; /* Make it span across both columns */
+    
+}
+.cart_star h4 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.cart_star_svg {
+    display: inline-flex;
+    width: 120px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.cart_star button {
+    display: block;
+    border: 2px solid rgba(0, 148, 255, 0.19);
+    background-color: rgba(0, 148, 255, 0.19);
+    color: black;
+    font-size: 14px;
+    border-radius: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.cart_star_svg * :hover {
+    fill: rgba(255, 225, 70, 1);
+}

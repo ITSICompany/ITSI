@@ -1,0 +1,31 @@
+.carts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 33px;
+    row-gap: 50px;
+}
+.carts_cart {
+    width: 1150px;
+    height: 70px;
+    border-radius: 6px;
+    border: 2px solid #D3D3D3;
+    cursor: pointer;
+}
+.carts_cart h4 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.carts_cart_content {
+    display: none;
+    width: 1150px;
+    height: 200px;
+    border-radius: 6px;
+    border: 2px dashed  #D3D3D3;
+    margin-top: 40px;
+}
+.carts_cart_content h5 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 20px;
+}

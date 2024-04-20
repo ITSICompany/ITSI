@@ -1,0 +1,44 @@
+{% extends 'base/index.html' %}
+
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/style_service.css' %}">
+{% endblock style %}
+
+{% block title %}ITSI{% endblock title %}
+
+{% block content %}
+    <h3>О сервисе</h3>
+    <div class="carts">
+        <div class="carts_cart">
+            <h4>Регистрация</h4>
+            <a href="#">Заключение договора</a>
+            <a href="#">Общий API</a>
+        </div>
+        <div class="carts_cart">
+            <h4>Личный кабинет</h4>
+            <a href="#">ITSI ID</a>
+            <a href="#">Настройка API</a>
+            <a href="#">Информация по API</a>
+        </div>
+        <div class="carts_cart">
+            <h4>Начало работы</h4>
+            <a href="#">Документация</a>
+            <a href="#">Что такое API</a>
+            <a href="#">Плюсы нашего API</a>
+        </div>
+        <div class="carts_cart">
+            <h4>Аналитика</h4>
+            <a href="#">Мониторинг использования</a>
+            <a href="#">График отправленных запросов</a>
+            <a href="#">Таблица отправленных запросов</a>
+        </div>
+        <div class="carts_cart">
+            <h4>Информация по API</h4>
+            <a href="#">Информация по API</a>
+            <a href="#">API общедоступный</a>
+        </div>
+    </div>
+{% endblock content %}
+    
