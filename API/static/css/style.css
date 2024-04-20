@@ -61,3 +61,23 @@ body {
 .content h3 {
     font-size: 32px;
 }
+.oglav {
+    position: absolute;
+    width: 400px;
+    height: 550px;
+    border-radius: 6px;
+    border: 2px solid #D3D3D3;
+    color: black;
+    text-decoration: none;
+    top: 171px;
+    left: 1500px;
+}
+.oglav a {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 20px;
+    color: #0047FF;
+    text-decoration: #0047FF underline;
+    width: max-content;
+}

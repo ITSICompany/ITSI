@@ -1,0 +1,103 @@
+{% extends 'base/index.html' %}
+
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/style_cabinet.css' %}">
+{% endblock style %}
+
+{% block title %}ITSI{% endblock title %}
+
+{% block content %}
+    <h3>ITSI ID</h3>
+    <div class="carts">
+        <div id="carts_cart__menu" class="carts_cart" >
+            <h4>Информация <span style="color: #0047FF;">#</span></h4>
+            <div id="carts_cart_content" class="carts_cart_content">
+                <h5>url отправки POST запроса: <span style="color: #0047FF;">https://itsi-api.su</span></h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="carts_profile">
+        <div class="carts_profile_cart">
+            <img src="{{ data.avatar.url }}">
+            <h4>{{ data.name }} {{ data.surname}}</h4>
+            <h4>Подключенные сервисы</h4>
+            <div class="carts_profile_cart_services">
+                {% for el in data.services.all|slice:":6" %}
+                    <div>
+                        <button>{{ el.name }}</button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="carts_team">
+        <div class="carts_team_cart" >
+            <h4>Ваша команда <span style="color: #0047FF;">#</span></h4>
+            <div class="carts_team_cart_content">
+                {% for el in data.team.all|slice:":4" %}
+                    <div>
+                        <img src="{{ el.avatar.url }}" alt="">
+                        <h5>{{ el.name }} {{ el.surname }}</h5>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="carts_products">
+        <div class="carts_products_cart" >
+            <h4>Ваши продукты <span style="color: #0047FF;">#</span></h4>
+            <div class="carts_products_cart_content">
+                {% for el in data.products.all|slice:":8" %}
+                    <div>
+                        <button>{{ el.name }}</button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="chart">
+        <h4>Аналитика <span style="color: #0047FF;">#</span></h4>
+        <div style="max-width: 1156px; max-height: 600px; border-radius: 6px;">
+            <canvas id="chart" style="background-color: rgba(0, 148, 255, 0.19); border-radius: 6px;"></canvas>
+        </div>
+    
+    </div>
+    <div class="oglav">
+        <a href="#">post</a>
+        <a href="#">post</a>
+        <a href="#">post</a>
+        <a href="#">post</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            {% for el in data.analytics.all %}
+                var data = [{{ el.January}}, {{ el.February}}, {{ el.March}}, {{ el.April}}, {{ el.May}}, {{ el.June}}, {{ el.July}}, {{ el.August}}, {{ el.September}}, {{ el.October}}, {{ el.November}}, {{ el.December}}]; 
+            {% endfor %}
+            console.log(data)
+            const ctx = document.getElementById('chart');
+        
+            new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                    label: 'Users',
+                    data: data,
+                    fill: false,
+                    borderColor: '#0047FF',
+                    backgroundColor: '#0047FF',
+                    tension: 0,
+                }]
+            },
+            
+            });
+        </script>
+
+{% endblock content %}
