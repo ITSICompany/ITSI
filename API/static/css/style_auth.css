@@ -1,0 +1,127 @@
+.auth {
+    text-align: center;
+    margin-top: 80px;
+}
+.auth h4 {
+    font-size: 25px;
+}
+.auth_form {
+    margin-top: 60px;
+}
+.auth_form h5 {
+    font-size: 14px;
+    margin-left: -260px;
+    margin-top: 10px;
+}
+.auth_form input {
+    margin-top: 10px;
+    width: 292px;
+    height: 44px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+.auth_form_button button {
+    text-decoration: none;
+    border-radius: 3px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid rgba(0, 148, 255, 0.19);
+    background-color: rgba(0, 148, 255, 0.19);
+    margin-top: 10px;
+}
+.auth_form h6 {
+    font-size: 14px;
+    margin-top: 20px;
+}
+.social_network {
+    margin-top: 20px;
+}
+.social_network h5 {
+    font-size: 14px;
+}
+.social_network_svg {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 30px);
+    position: relative;
+    width: 100px;
+    background-color: white;
+    margin: 10px auto;
+}
+
+.social_network_svg::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 400px;
+    margin-left: -150px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: black;
+    z-index: -1;
+}
+
+.social_network_svg img {
+    position: relative; 
+    width: 25px;
+    height: 25px;
+    z-index: 1;
+}
+
+.checkbox-container {
+    margin-top: 10px;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 11px;
+    cursor: pointer;
+    font-size: 14px;
+    color: black;
+    margin-left: -120px;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    margin-left: -140px;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: lightgray;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: black;
+}
+
